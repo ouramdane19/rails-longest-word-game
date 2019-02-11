@@ -1,0 +1,13 @@
+<div class = "container">
+<ul class = " list-inline">
+<% @lettres.each do |lettre| %>
+  <li class = "list-inline-item "><%= lettre %></li>
+<% end %>
+</ul>
+<h3> What is the longest word you can find ?</h3>
+<form action="/score" method ="post" >
+<%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <input type="text" name="word" >
+  <input type="submit" value="Play!" class ="btn btn-success">
+</form>
+</div>
